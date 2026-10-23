@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../../assets//fonts/Oswald-VariableFont_wght.ttf") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+
+  .mainImage {
+    // height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    opacity: 60%;
+    transform: translate(0, -25%);
+  }
+
+  .overlape {
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    .upper {
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      // background-color: #fff;
+      padding: 2rem;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+      .upperLeft {
+        height: 100%;
+        width: 50%;
+        padding-inline: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-size: 2rem;
+        font-family: 'Oswald', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        span {
+          font-weight: 200;
+        }
+      }
+
+      .upperRight {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        padding-inline: 2rem;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        font-size: medium;
+        gap: 1rem;
+        
+      }
+    }
+
+    .bottom {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+      .bottomLeft {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .myImageBox {
+          height: 400px;
+          width: 600px;
+          overflow: hidden;
+          position: relative;
+          background-color: #fff;
+          img {
+            // height: 100%;
+            width: 100%;
+            position: absolute;
+            inset: 0;
+            // object-fit: cover;
+            // display: none;
+            transform: translate(0, -10%);
+          }
+        }
+      }
+
+      .bottomRight {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-inline: 2rem;
+        align-items: center;
+        font-size: medium;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        gap: 2rem;
+
+        span {
+          color: rgb(255, 174, 0);
+        }
+
+        .blue {
+          color: rgb(0, 255, 157)
+        }
+
+        .links {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          gap: 1.5rem;
+
+          button {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.575);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            background-color: transparent;
+            text-align: center;
+            
+
+            a {
+              text-decoration: none;
+              font-size: medium;
+              color: white;
+
+              
+            }
+
+            &:hover {
+              background: rgb(186, 196, 193);
+              
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
