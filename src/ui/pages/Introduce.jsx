@@ -41,33 +41,15 @@ const Introduce = () => {
             duration: 3,
             // ease: 'power.inOut'
         }).to(overlape.current, {
-            scrollTrigger: {
-                start: 'top center',
-                end: 'bottom bottom',
-                trigger: overlape.current,
-                scrub: true
-            },
             top: '-50vh',
             // bottom: '0%',
             duration: 1.5,
             ease: 'power.inOut'
         }, '-=3').to(myImage.current, {
-            scrollTrigger: {
-                start: 'top bottom',
-                end: 'bottom bottom',
-                trigger: myImage.current,
-                scrub: true
-            },
             transform: 'translate(0, 0%)',
             duration: 1.5,
             ease: 'power1.inOut'
         }, '-=3').from(split.chars, {
-            scrollTrigger: {
-                start: 'top bottom',
-                end: 'center bottom',
-                trigger: split.chars,
-                scrub: true
-            },
             yPercent: 50,
             opacity: 0,
             duration: 0.5,
