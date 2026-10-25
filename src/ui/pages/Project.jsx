@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const projects = [
     {
@@ -64,14 +64,14 @@ const Project = () => {
             }
         })
 
-        tl.to(project_main_image.current, {
+        tl.fromTo(project_main_image.current,{yPercent: 20}, {
             scrollTrigger: {
                 start: 'top bottom',
                 end: 'bottom bottom',
                 trigger: project_main_image.current,
                 scrub: true
             },
-            transform: 'translate(0, 0%)',
+            yPercent: 0,
             duration: 0.5,
             ease: 'power1.inOut'
         })
@@ -87,7 +87,7 @@ const Project = () => {
         }).to(upperLeftImage.current, {
             scale: 1.2,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.2,
         })
 
         projectTl.current = gsap.timeline({ paused: true })

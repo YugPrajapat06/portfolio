@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 const Ending = () => {
 
     const end_main = useRef(null)
@@ -23,14 +23,14 @@ const Ending = () => {
             }
         })
 
-        tl.to(endMainImage.current, {
+        tl.fromTo(endMainImage.current,{yPercent: -35}, {
             scrollTrigger: {
                 start: 'top bottom',
                 end: 'bottom bottom',
                 trigger: endMainImage.current,
                 scrub: true
             },
-            transform: 'translate(0, 0%)',
+            yPercent: 0,
             duration: 1,
             ease: 'power1.inOut'
         })

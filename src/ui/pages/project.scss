@@ -9,10 +9,11 @@
         // height: 100%;
         width: 100%;
         position: absolute;
-        top: -100%;
+        top: -120%;
         opacity: 70%;
         object-fit: cover;
-        transform: translate(0, 25%);
+        transform: translate(0, 0%);
+        will-change: transform;
     }
 
     .overlape {

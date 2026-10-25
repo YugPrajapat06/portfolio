@@ -8,7 +8,7 @@ import myPhoto from '../../assets/myphoto.png';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const Introduce = () => {
 
@@ -36,29 +36,35 @@ const Introduce = () => {
             }
         });
 
-        tl.to(mainImage.current, {
-            transform: 'translate(0, -5%)',
-            duration: 3,
-            // ease: 'power.inOut'
-        }).to(overlape.current, {
+        tl.fromTo(
+            mainImage.current,
+            { yPercent: -20 },
+            {
+                yPercent: 0,
+                duration: 3,
+                ease: 'none',
+            }
+        ).to(overlape.current, {
             top: '-50vh',
             // bottom: '0%',
             duration: 1.5,
             ease: 'power.inOut'
-        }, '-=3').to(myImage.current, {
-            transform: 'translate(0, 0%)',
-            duration: 1.5,
-            ease: 'power1.inOut'
-        }, '-=3').from(split.chars, {
-            yPercent: 50,
-            opacity: 0,
-            duration: 0.5,
-            ease: 'expo.out',
-            stagger: {
-                each: 0.06,
-                from: 'start'
-            }
-        }, '-=3')
+        }, '-=3').fromTo(myImage.current,
+            { yPercent: -25 },
+            {
+                yPercent: 0,
+                duration: 1.5,
+                ease: 'power1.inOut',
+            }, '-=3').from(split.chars, {
+                yPercent: 50,
+                opacity: 0,
+                duration: 0.5,
+                ease: 'expo.out',
+                stagger: {
+                    each: 0.06,
+                    from: 'start'
+                }
+            }, '-=3')
     }, {})
 
     return (
