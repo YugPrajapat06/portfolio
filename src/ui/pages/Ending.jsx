@@ -31,7 +31,7 @@ const Ending = () => {
 
     return (
         <div ref={end_main} className='end_main'>
-            <img ref={endMainImage} className='endMainImage' src="https://i.pinimg.com/736x/a8/c1/64/a8c164cc63d88d9d93a7c4ac068b50ca.jpg" alt="" />
+            <img onLoad={() => ScrollTrigger.refresh()} ref={endMainImage} className='endMainImage' src="https://i.pinimg.com/736x/a8/c1/64/a8c164cc63d88d9d93a7c4ac068b50ca.jpg" alt="" />
             <div className="endOverlape">
                 <div className="upper">
                     <div className="upper_left">

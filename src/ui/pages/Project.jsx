@@ -105,7 +105,7 @@ const Project = () => {
     
     return (
         <div ref={project_main} className='project_main'>
-            <img className='projectMainImage' ref={project_main_image} src="https://i.pinimg.com/736x/c8/9e/46/c89e460668273815c5c092b4dc535d31.jpg" alt="" />
+            <img onLoad={() => ScrollTrigger.refresh()} className='projectMainImage' ref={project_main_image} src="https://i.pinimg.com/736x/c8/9e/46/c89e460668273815c5c092b4dc535d31.jpg" alt="" />
             <div className="overlape">
                 <div className="upper">
                     <div className="upperLeft">
