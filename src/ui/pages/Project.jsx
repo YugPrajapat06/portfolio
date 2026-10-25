@@ -54,15 +54,17 @@ const Project = () => {
 
     useGSAP(() => {
 
-        const tl = gsap.timeline()
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: project_main.current,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1,
+                pin: false,
+            }
+        })
 
         tl.fromTo(project_main_image.current,{yPercent: 20}, {
-            scrollTrigger: {
-                start: 'top bottom',
-                end: 'bottom bottom',
-                trigger: project_main_image.current,
-                scrub: true
-            },
             yPercent: 0,
             duration: 0.5,
             ease: 'power1.inOut'

@@ -13,15 +13,17 @@ const Ending = () => {
     const endMainImage = useRef(null)
 
     useGSAP(() => {
-        const tl = gsap.timeline()
-
-        tl.fromTo(endMainImage.current,{yPercent: -35}, {
+        const tl = gsap.timeline({
             scrollTrigger: {
+                trigger: end_main.current,
                 start: 'top bottom',
-                end: 'bottom bottom',
-                trigger: endMainImage.current,
-                scrub: true
-            },
+                end: 'bottom top',
+                scrub: 1,
+                pin: false,
+            }
+        })
+
+        tl.fromTo(endMainImage.current, { yPercent: -35 }, {
             yPercent: 0,
             duration: 1,
             ease: 'power1.inOut'
