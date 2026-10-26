@@ -95,7 +95,7 @@ const Introduce = () => {
                                 <a href="http://www.linkedin.com/in/yugvendra-prajapat-687274323">Linkedin</a>
                             </button>
                             <button>
-                                <a href="https://drive.google.com/file/d/1c-_3PSoyo_guOmlNbyihDtaH4QiZYWnG/view?usp=drive_link">Resume</a>
+                                <a href="https://drive.google.com/file/d/1u-RvfTNqiDIzRwaKEoRPxPwYOmeBDvxS/view?usp=sharing">Resume</a>
                             </button>
                             <button>
                                 <a href="https://wa.me/918269154588">Hire Me</a>
