@@ -1,4 +1,62 @@
+@font-face {
+    font-family: 'HennyPenny';
+    src: url(../../assets/fonts/HennyPenny-Regular.ttf) format("woff2");
+}
+
 .loader_main{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    gap: 50px;
+
+    .content {
+        overflow: hidden;
+
+        h1 {
+            font-size: 70px;
+            font-family: 'Oswald', 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        span {
+            background: linear-gradient(to right, #15aef5, #013e83);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .loader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .cover{
+            height: 20px;
+            width: 500px;
+            border: 2px solid #0eb9a3;
+            border-radius: 5px;
+            padding: 2px;
+
+            .value{
+                height: 100%;
+                width: 0%;
+                background: linear-gradient(to right, #0eb9a3, #0e7ba3);
+                border-radius: 5px;
+                animation: loading 2s linear infinite;
+            }
+        }
+
+        .text {
+            color: #0eb9a3;
+            font-size: 20px;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
 }
